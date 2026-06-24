@@ -32,8 +32,8 @@ type ErrorResponse struct {
 	Error string `json:"error"`
 }
 
-// WriteJSONError writes a JSON error body with the given status code. Later
-// endpoint subs use this for input validation and arithmetic failures so all
+// WriteJSONError writes a JSON error body with the given status code. The
+// endpoints use this for input validation and arithmetic failures so all
 // error responses share the ErrorResponse shape.
 func WriteJSONError(w http.ResponseWriter, status int, message string) {
 	WriteJSON(w, status, ErrorResponse{Error: message})

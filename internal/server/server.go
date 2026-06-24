@@ -1,6 +1,6 @@
 // Package server wires the calc-api HTTP routes together. NewRouter is the
-// single place routes are registered; endpoint subs extend it as they add the
-// arithmetic handlers (/add, /subtract, /multiply, /divide).
+// single place routes are registered: /health plus the arithmetic handlers
+// (/add, /subtract, /multiply, /divide).
 package server
 
 import (
