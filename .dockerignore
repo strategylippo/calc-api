@@ -1,0 +1,8 @@
+# Keep the Docker build context small and free of local state.
+.git
+.gitignore
+.builder
+/calc-api
+README.md
+Dockerfile
+.dockerignore
