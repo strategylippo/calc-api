@@ -6,6 +6,7 @@ package server
 import (
 	"net/http"
 
+	"github.com/strategylippo/calc-api/internal/handlers"
 	"github.com/strategylippo/calc-api/internal/httpx"
 )
 
@@ -15,6 +16,10 @@ import (
 func NewRouter() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health", handleHealth)
+	mux.HandleFunc("GET /add", handlers.Add)
+	mux.HandleFunc("GET /subtract", handlers.Subtract)
+	mux.HandleFunc("GET /multiply", handlers.Multiply)
+	mux.HandleFunc("GET /divide", handlers.Divide)
 	return mux
 }
 
