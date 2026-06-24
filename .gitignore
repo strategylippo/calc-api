@@ -1,0 +1,5 @@
+# Builder run artifacts (local orchestration state, never shipped)
+.builder/
+
+# Compiled binary
+/calc-api
